@@ -11,6 +11,9 @@ TagManager:
   - EPrompt
   - DialogueBox
   - DialogueText
+  - WireCutter
+  - BoxCutter
+  - Scissors
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - Ground
   - Button
   - Dialogue
-  - 
+  - Items
   - 
   - 
   - 
