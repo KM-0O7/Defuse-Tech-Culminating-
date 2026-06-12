@@ -4,6 +4,7 @@ public class WireScripts : MonoBehaviour
 {
     [SerializeField] private bool correctWire;
     SceneTransition sceneTransition;
+    [SerializeField] private string sceneToTp;
     bool tp = false;
 
     private void Start()
@@ -19,24 +20,28 @@ public class WireScripts : MonoBehaviour
             {
                 Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Wires"));
-                if (hit.collider != null)
+                if (hit.collider != null && hit.collider.gameObject == gameObject)
                 {
                     if (HandScript.carryingObject && tp == false && SceneTransition.canTP)
                     {
                         tp = true;
                         if (HandScript.holdingCorrectObject)
                         {
+                            Debug.Log("HoldingCorrectItem");
                             if (correctWire)
                             {
-                                sceneTransition.TP("Warp2");
+                                
+                                sceneTransition.TP(sceneToTp);
                             }
                             else
                             {
+                                Debug.Log("What?");
                                 sceneTransition.TP("BlowUp");
                             }
                         }
                         else
                         {
+                            Debug.Log("BlowUp");
                             sceneTransition.TP("BlowUp");
                         }
                     }

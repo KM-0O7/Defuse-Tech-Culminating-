@@ -28,8 +28,9 @@ public class HandScript : MonoBehaviour
                 {
                     carryingObject = true;
                     heldObject = hit.collider.gameObject;
-                    if (hit.collider.tag == "WireCutter")
+                    if (hit.collider.tag == "WireCutter" || hit.collider.tag == "Drone")
                     {
+                        Debug.Log("Picked Up Cutter!");
                         holdingCorrectObject = true;
                     }
                     else holdingCorrectObject = false;
@@ -51,12 +52,22 @@ public class HandScript : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Destroy(clonedItem.gameObject);
-                heldObject.SetActive(true);
-                clonedItem = null;
-                carryingObject = false;
-                holdingCorrectObject = false;
+                if (clonedItem.gameObject)
+                {
+                    Destroy(clonedItem.gameObject);
+                    heldObject.SetActive(true);
+                    clonedItem = null;
+                    carryingObject = false;
+                    holdingCorrectObject = false;
+
+                }
             }
         }
+    }
+
+    private void OnEnable()
+    {
+        carryingObject = false;
+        holdingCorrectObject = false;
     }
 }

@@ -14,6 +14,7 @@ TagManager:
   - WireCutter
   - BoxCutter
   - Scissors
+  - Drone
   layers:
   - Default
   - TransparentFX
