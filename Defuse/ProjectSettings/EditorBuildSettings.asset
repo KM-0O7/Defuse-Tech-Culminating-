@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Warp3.unity
     guid: 1348f3b13f3dff04e8c85486b3511678
+  - enabled: 1
+    path: Assets/Scenes/CodingProblem.unity
+    guid: f056cd5386d953f4b95210bd647251bc
+  - enabled: 1
+    path: Assets/Scenes/Warp4.unity
+    guid: dad826ab7270b474a857c78ede4e686c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

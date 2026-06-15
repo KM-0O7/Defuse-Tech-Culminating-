@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     public static bool canjump = true;
     public Vector2 lastGroundPosition = Vector2.zero;
+
     private void Start()
     {
         playerRig = GetComponent<Rigidbody2D>();
@@ -102,23 +103,28 @@ public class PlayerMovement : MonoBehaviour
         wasGroundedLastFrame = isGrounded;
 
         // ---- FASTER JUMP FALL ----
-       
-            if (canjump == false)
+
+        if (canjump == false)
+        {
+            if (gravityjump)
             {
-                if (gravityjump)
-                {
-                    playerRig.gravityScale += 2; //add gravityScale to gravity when falling so it feels less floaty when jumping
-                    gravityjump = false;
-                }
+                playerRig.gravityScale += 2; //add gravityScale to gravity when falling so it feels less floaty when jumping
+                gravityjump = false;
             }
-            else
+        }
+        else
+        {
+            if (!gravityjump)
             {
-                if (!gravityjump)
-                {
-                    gravityjump = true;
-                    playerRig.gravityScale = 1f; //set back to normal gravity
-                }
+                gravityjump = true;
+                playerRig.gravityScale = 1f; //set back to normal gravity
             }
-        
+        }
+    }
+
+    private void OnEnable()
+    {
+        canjump = true;
+        canMove = true;
     }
 }
