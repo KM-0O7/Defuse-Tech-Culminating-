@@ -174,10 +174,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.26171875
+    x: 0.26145834
     y: 0
-    width: 0.14305556
-    height: 0.14305556
+    width: 0.14351854
+    height: 0.14351852
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1239,7 +1239,7 @@ GameObject:
   - component: {fileID: 1116733704}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1401,6 +1401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5354889f046633419959e66d75d5d6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdingSolderBoard: 0
+  glasses: 0
 --- !u!257 &1116733708
 TargetJoint2D:
   m_ObjectHideFlags: 0
@@ -1966,6 +1968,8 @@ MonoBehaviour:
   correctWire: 1
   sceneToTp: InsideOfBomb
   canSkip: 1
+  solderWire: 0
+  solderBoardToShow: {fileID: 0}
 --- !u!4 &1860152797
 Transform:
   m_ObjectHideFlags: 0
@@ -2004,6 +2008,8 @@ MonoBehaviour:
   correctWire: 1
   sceneToTp: InsideOfBomb
   canSkip: 0
+  solderWire: 0
+  solderBoardToShow: {fileID: 0}
 --- !u!1 &2129004210
 GameObject:
   m_ObjectHideFlags: 0

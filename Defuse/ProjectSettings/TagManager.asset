@@ -17,6 +17,11 @@ TagManager:
   - Drone
   - GroundWire
   - GroundWireSlot
+  - SolderWire
+  - Solder
+  - SolderBoard
+  - Hand
+  - Glasses
   layers:
   - Default
   - TransparentFX

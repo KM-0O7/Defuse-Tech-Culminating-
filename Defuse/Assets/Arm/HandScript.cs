@@ -3,17 +3,20 @@ using UnityEngine.UIElements;
 
 public class HandScript : MonoBehaviour
 {
-    TargetJoint2D Tj2d;
+    private TargetJoint2D Tj2d;
     public static bool holdingCorrectObject = false;
     public static bool carryingObject = false;
-    GameObject clonedItem;
-    GameObject heldObject;
-    void Start()
+    private GameObject clonedItem;
+    private GameObject heldObject;
+    public bool holdingSolderBoard = false;
+    public bool glasses = false;
+
+    private void Start()
     {
         Tj2d = GetComponent<TargetJoint2D>();
     }
- 
-    void Update()
+
+    private void Update()
     {
         Input.mousePosition.Set(Input.mousePosition.x, Input.mousePosition.y, 0);
         Tj2d.target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -28,23 +31,38 @@ public class HandScript : MonoBehaviour
                 {
                     carryingObject = true;
                     heldObject = hit.collider.gameObject;
-                    if (hit.collider.tag == "WireCutter" || hit.collider.tag == "Drone")
+                    if (hit.collider.tag == "WireCutter" || hit.collider.tag == "Drone" || hit.collider.tag == "Solder")
                     {
                         Debug.Log("Picked Up Cutter!");
                         holdingCorrectObject = true;
                     }
                     else holdingCorrectObject = false;
-                    
-                    clonedItem = Instantiate(heldObject);
-                    heldObject.SetActive(false);
-                    SpriteRenderer[] sprites = clonedItem.GetComponentsInChildren<SpriteRenderer>();
-                    for (int i = 0; i < sprites.Length; i++)
+                    if (hit.collider.tag == "SolderBoard")
                     {
-                        sprites[i].sortingOrder = 4;
+                        holdingSolderBoard = true;
+                    }
+                    else holdingSolderBoard = false;
+
+                    if (hit.collider.tag == "Glasses")
+                    {
+                        Destroy(hit.collider.gameObject);
+                        glasses = true;
+                        carryingObject = false;
+                    }
+                    else
+                    {
+                        clonedItem = Instantiate(heldObject);
+                        heldObject.SetActive(false);
+                        SpriteRenderer[] sprites = clonedItem.GetComponentsInChildren<SpriteRenderer>();
+                        for (int i = 0; i < sprites.Length; i++)
+                        {
+                            sprites[i].sortingOrder = 4;
+                        }
                     }
                 }
             }
-        } else
+        }
+        else
         {
             if (clonedItem != null)
             {
@@ -59,7 +77,7 @@ public class HandScript : MonoBehaviour
                     clonedItem = null;
                     carryingObject = false;
                     holdingCorrectObject = false;
-
+                    holdingSolderBoard = false;
                 }
             }
         }

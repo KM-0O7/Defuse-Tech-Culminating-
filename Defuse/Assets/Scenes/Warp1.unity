@@ -223,6 +223,8 @@ MonoBehaviour:
   correctWire: 0
   sceneToTp: 
   canSkip: 0
+  solderWire: 0
+  solderBoardToShow: {fileID: 0}
 --- !u!61 &10794995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -449,7 +451,7 @@ GameObject:
   - component: {fileID: 108557800}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -481,6 +483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5354889f046633419959e66d75d5d6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdingSolderBoard: 0
+  glasses: 0
 --- !u!257 &108557795
 TargetJoint2D:
   m_ObjectHideFlags: 0
@@ -961,6 +965,8 @@ MonoBehaviour:
   correctWire: 0
   sceneToTp: 
   canSkip: 0
+  solderWire: 0
+  solderBoardToShow: {fileID: 0}
 --- !u!212 &128498626
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2192,6 +2198,8 @@ MonoBehaviour:
   correctWire: 0
   sceneToTp: 
   canSkip: 0
+  solderWire: 0
+  solderBoardToShow: {fileID: 0}
 --- !u!61 &1160459752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2862,6 +2870,8 @@ MonoBehaviour:
   correctWire: 1
   sceneToTp: Warp2
   canSkip: 0
+  solderWire: 0
+  solderBoardToShow: {fileID: 0}
 --- !u!61 &1482372074
 BoxCollider2D:
   m_ObjectHideFlags: 0

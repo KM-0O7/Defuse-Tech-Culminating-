@@ -32,6 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Warp4.unity
     guid: dad826ab7270b474a857c78ede4e686c
+  - enabled: 1
+    path: Assets/Scenes/BigButton.unity
+    guid: 56054e7f9c21fb14482594962c95d1b0
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: d0ca7191b6b5bc54bb5c56c06dabb889
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
