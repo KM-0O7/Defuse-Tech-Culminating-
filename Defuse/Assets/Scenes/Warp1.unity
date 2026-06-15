@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctWire: 0
   sceneToTp: 
+  canSkip: 0
 --- !u!61 &10794995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -757,11 +758,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '15.
+  m_text: '7.
 
-    HZYYMJGQZJBNWJ
+    JBAAOLISBLDPYL
 
-    W=O'
+    K LXBHSZ D'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8764a52957eccb4b81a8d6951edcfe9, type: 2}
   m_sharedMaterial: {fileID: 4655136354184523770, guid: b8764a52957eccb4b81a8d6951edcfe9, type: 2}
@@ -959,6 +960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctWire: 0
   sceneToTp: 
+  canSkip: 0
 --- !u!212 &128498626
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2189,6 +2191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctWire: 0
   sceneToTp: 
+  canSkip: 0
 --- !u!61 &1160459752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2858,6 +2861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctWire: 1
   sceneToTp: Warp2
+  canSkip: 0
 --- !u!61 &1482372074
 BoxCollider2D:
   m_ObjectHideFlags: 0

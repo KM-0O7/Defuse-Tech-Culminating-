@@ -229,9 +229,9 @@ MonoBehaviour:
   m_AssetsPPU: 32
   m_RefResolutionX: 320
   m_RefResolutionY: 180
-  m_CropFrame: 0
-  m_GridSnapping: 0
-  m_FilterMode: 0
+  m_CropFrame: 4
+  m_GridSnapping: 2
+  m_FilterMode: 1
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -394,8 +394,8 @@ Transform:
   m_GameObject: {fileID: 506966891}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.092900045, y: 0.17516999, z: 0}
-  m_LocalScale: {x: 0.019196585, y: 0.13760312, z: 1}
+  m_LocalPosition: {x: -0.09396, y: 0.18478, z: 0}
+  m_LocalScale: {x: 0.03255547, y: 0.15683177, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1860152797}
@@ -778,8 +778,8 @@ Transform:
   m_GameObject: {fileID: 656156687}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1429101, y: 0.23204994, z: 0}
-  m_LocalScale: {x: 0.08556973, y: 0.027175823, z: 1}
+  m_LocalPosition: {x: -0.1429101, y: 0.22369, z: 0}
+  m_LocalScale: {x: 0.08556973, y: 0.043895748, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1860152797}
@@ -865,8 +865,8 @@ Transform:
   m_GameObject: {fileID: 698415426}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.012090066, y: 0.11729993, z: 0}
-  m_LocalScale: {x: 0.23257405, y: 0.024388608, z: 1}
+  m_LocalPosition: {x: 0.00611, y: 0.10727, z: 0}
+  m_LocalScale: {x: 0.24452604, y: 0.044452384, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1860152797}
@@ -952,8 +952,8 @@ Transform:
   m_GameObject: {fileID: 821240582}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17610015, y: 0.31708997, z: 0}
-  m_LocalScale: {x: 0.019196585, y: 0.197255, z: 1}
+  m_LocalPosition: {x: -0.17048, y: 0.31708997, z: 0}
+  m_LocalScale: {x: 0.030446168, y: 0.197255, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1860152797}
@@ -1039,8 +1039,8 @@ Transform:
   m_GameObject: {fileID: 981606609}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.028659929, y: 0.40352, z: 0}
-  m_LocalScale: {x: 0.31406856, y: 0.024388608, z: 1}
+  m_LocalPosition: {x: -0.028659929, y: 0.4031, z: 0}
+  m_LocalScale: {x: 0.31406856, y: 0.048632294, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1860152797}
@@ -1825,8 +1825,8 @@ Transform:
   m_GameObject: {fileID: 1803177242}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.120999806, y: 0.26002002, z: 0}
-  m_LocalScale: {x: 0.019196585, y: 0.3113979, z: 1}
+  m_LocalPosition: {x: 0.1319, y: 0.26002002, z: 0}
+  m_LocalScale: {x: 0.040992774, y: 0.3113979, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1860152797}
@@ -1897,6 +1897,7 @@ GameObject:
   - component: {fileID: 1860152797}
   - component: {fileID: 1860152796}
   - component: {fileID: 1860152795}
+  - component: {fileID: 1860152798}
   m_Layer: 10
   m_Name: Opening
   m_TagString: Untagged
@@ -1938,7 +1939,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 1}
+  m_Offset: {x: -0.02344887, y: 0.26079443}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1948,7 +1949,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 0.2}
+  m_Size: {x: 0.376237, y: 0.36897403}
   m_EdgeRadius: 0
 --- !u!114 &1860152796
 MonoBehaviour:
@@ -1964,6 +1965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctWire: 1
   sceneToTp: InsideOfBomb
+  canSkip: 1
 --- !u!4 &1860152797
 Transform:
   m_ObjectHideFlags: 0
@@ -1987,6 +1989,21 @@ Transform:
   - {fileID: 635903107}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1860152798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860152794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d1dd6b583d68942b819ad43505b1c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctWire: 1
+  sceneToTp: InsideOfBomb
+  canSkip: 0
 --- !u!1 &2129004210
 GameObject:
   m_ObjectHideFlags: 0

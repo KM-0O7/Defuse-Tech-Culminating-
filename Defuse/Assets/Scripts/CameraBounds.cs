@@ -27,7 +27,11 @@ public class CameraBounds : MonoBehaviour
             Vector2 min = b.min;
             Vector2 max = b.max;
             Debug.Log("Reset Bound");
-            Camera.main.GetComponent<FollowPlayer>().SetBounds(min, max);
+            var follow = Camera.main.GetComponent<FollowPlayer>();
+            if (follow != null)
+            {
+                Camera.main.GetComponent<FollowPlayer>().SetBounds(min, max);
+            }
         }
         else Debug.Log("How?");
     }

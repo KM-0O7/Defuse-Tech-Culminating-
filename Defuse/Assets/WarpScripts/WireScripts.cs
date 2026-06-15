@@ -5,6 +5,7 @@ public class WireScripts : MonoBehaviour
     [SerializeField] private bool correctWire;
     SceneTransition sceneTransition;
     [SerializeField] private string sceneToTp;
+    [SerializeField] private bool canSkip = false;
     bool tp = false;
 
     private void Start()
@@ -25,7 +26,7 @@ public class WireScripts : MonoBehaviour
                     if (HandScript.carryingObject && tp == false && SceneTransition.canTP)
                     {
                         tp = true;
-                        if (HandScript.holdingCorrectObject)
+                        if (HandScript.holdingCorrectObject || canSkip)
                         {
                             Debug.Log("HoldingCorrectItem");
                             if (correctWire)

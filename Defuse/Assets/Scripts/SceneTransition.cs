@@ -48,6 +48,25 @@ public class SceneTransition : MonoBehaviour
 
         currentScene = sceneName;
         yield return new WaitForSeconds(0.5f);
+        FollowPlayer follow = Camera.main.GetComponent<FollowPlayer>();
+        if (follow != null)
+        {
+            follow.SnapToTarget();
+        }
+        var roomBounds = GameObject.Find("RoomBounds");
+        if (roomBounds)
+        {
+            CameraBounds cameraBound = GameObject.Find("RoomBounds").GetComponent<CameraBounds>();
+            if (cameraBound != null)
+            {
+                cameraBound.ResetBounds();
+                yield return null;
+                yield return null;
+                yield return null;
+                cameraBound.ResetBounds();
+            }
+        }
+       
         Debug.Log("TransitionDone");
         transitionAnimator.SetTrigger("StopTransition");
         canTP = true;
